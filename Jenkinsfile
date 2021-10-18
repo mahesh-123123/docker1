@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                  bat 'docker build -t maheshreddy123/py:v1 .'
+                  bat 'docker build -t maheshreddy123/py:v2 .'
                  
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub',  url: '') {
-                bat 'docker push maheshreddy123/py:v1'
+                bat 'docker push maheshreddy123/py:v2'
                
                 }
               }
