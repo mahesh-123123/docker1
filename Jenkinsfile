@@ -18,6 +18,7 @@ pipeline {
             steps {
                 script {
                   bat 'docker build -t maheshreddy123/py:v2 .'
+                  bat 'docker run -itd -p 3030:80 maheshreddy123/py:v2'  
                  
                 }
             }
