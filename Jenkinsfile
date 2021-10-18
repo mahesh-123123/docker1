@@ -7,13 +7,13 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/mahesh-123123/docker1.git'
             }
         }
-        stage('Maven Build') {
+       /* stage('Maven Build') {
             steps {
                 bat 'mvn clean'
                 bat 'mvn install'
                 bat 'mvn package'
             }
-        }
+        }*/
         stage('Build Docker Image') {
             steps {
                 script {
